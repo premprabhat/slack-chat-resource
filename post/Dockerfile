@@ -4,7 +4,7 @@ RUN apk update
 RUN apk add git
 RUN go get github.com/nlopes/slack
 COPY ./utils /go/src/github.com/jleben/slack-chat-resource/utils
-RUN go build -o /assets/utils github.com/jleben/slack-chat-resource/utils
+#RUN go build -o /assets/utils github.com/jleben/slack-chat-resource/utils
 
 FROM build-env as build-post
 COPY ./post/check /go/src/github.com/jleben/slack-chat-resource/post/check/
